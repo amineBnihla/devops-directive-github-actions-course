@@ -9,5 +9,11 @@ jobs:
    example-job:
     runs-on: ubuntu-latest
     steps:
-       - name: "Print a welcome message"
-         run: echo "This first workflow"
+       - name: "Print a welcome message."
+         run: echo "This is the first workflow."
+
+       - name: "use checkout action."
+         uses: actions/checkout@v6.0.2
+
+       - name: "list of repo files."
+         run: ls -la
